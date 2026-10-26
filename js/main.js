@@ -20,7 +20,7 @@
     const li = (p.inclui || []).map(i => `<li>${i}</li>`).join('');
     const msg = `Olá! Tenho interesse no pacote "${p.nome}"${p.data && p.data !== 'A confirmar' ? ' (' + p.data + ')' : ''}. Pode me passar mais informações?`;
     return `<article class="card rv">
-      <figure><img src="${p.imagem}" alt="${p.destino}" loading="lazy" onerror="this.remove()"><span class="tag">${p.tipo === 'peregrinacao' ? 'Peregrinação' : 'Excursão'}</span></figure>
+      <figure><img src="${p.imagem}" alt="${p.destino}" loading="lazy"><span class="tag">${p.tipo === 'peregrinacao' ? 'Peregrinação' : 'Excursão'}</span></figure>
       <div class="card-c"><h3>${p.nome}</h3>
       <p class="meta"><b>Destino:</b> ${p.destino}<br><b>Data:</b> ${p.data}${p.duracao ? `<br><b>Duração:</b> ${p.duracao}` : ''}</p>
       <p>${p.descricao}</p>
@@ -28,13 +28,16 @@
       ${li ? `<ul>${li}</ul>` : ''}${p.obs ? `<p class="obs">${p.obs}</p>` : ''}
       <a class="btn btn-azul" href="${wa(msg)}" target="_blank" rel="noopener">Quero mais informações</a></div></article>`;
   };
+  
   const lista = $('#lista-pacotes');
   const filtros = [['todos', 'Todos'], ['peregrinacao', 'Peregrinações'], ['excursao', 'Excursões']];
   $('#filtros').innerHTML = filtros.map(([v, t], i) => `<button data-f="${v}" aria-pressed="${i === 0}">${t}</button>`).join('');
+  
   const mostrar = f => {
     lista.innerHTML = PACOTES.filter(p => f === 'todos' || p.tipo === f).map(cartao).join('');
     revelar(lista);
   };
+  
   $('#filtros').addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
     $('#filtros').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
@@ -43,7 +46,9 @@
 
   const lb = $('#lb'), lbImg = $('img', lb), lbCap = $('figcaption', lb);
   let atual = 0;
-  $('#mosaico').innerHTML = FOTOS.map((f, i) => `<button class="rv ${f.forma}" data-i="${i}" aria-label="Abrir foto: ${f.alt}"><img src="${f.src}" alt="${f.alt}" loading="lazy" onerror="this.remove()"></button>`).join('');
+  
+  $('#mosaico').innerHTML = FOTOS.map((f, i) => `<button class="rv ${f.forma}" data-i="${i}" aria-label="Abrir foto: ${f.alt}"><img src="${f.src}" alt="${f.alt}" loading="lazy"></button>`).join('');
+  
   const abrir = i => { atual = (i + FOTOS.length) % FOTOS.length; const f = FOTOS[atual]; lbImg.src = f.src; lbImg.alt = f.alt; lbCap.textContent = f.legenda; lb.hidden = false; $('.lb-x').focus(); };
   const fechar = () => { lb.hidden = true; };
   $('#mosaico').addEventListener('click', e => { const b = e.target.closest('button'); if (b && b.querySelector('img')) abrir(+b.dataset.i); });
@@ -68,6 +73,7 @@
 
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .12 });
   function revelar(r = document) { r.querySelectorAll('.rv:not(.on)').forEach(el => reduz ? el.classList.add('on') : io.observe(el)); }
+  
   const links = [...menu.querySelectorAll('a[href^="#"]')];
   const so = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('ativo', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-45% 0px -50% 0px' });
   document.querySelectorAll('main section[id]').forEach(s => so.observe(s));

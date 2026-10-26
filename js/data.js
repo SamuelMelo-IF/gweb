@@ -1,16 +1,14 @@
 /* ==========================================================
-   ARQUIVO DE CONTEÚDO — edite aqui pacotes, fotos, vídeos e contatos.
-   Imagens: coloque os arquivos nas pastas indicadas (nomes abaixo).
+   ARQUIVO DE CONTEÚDO
    ========================================================== */
 const CONTACT = {
-  whatsapp: "86995932781",            // usado em https://wa.me/<número>
+  whatsapp: "86995932781",
   telefone: "(86) 99593-2781",
   instagram: "generalissima_viagens",
-  email: "",                          // PREENCHER (deixe vazio para ocultar)
+  email: "", 
   endereco: "Rua Vereador Otávio Braga, 3043 – Planalto Ininga"
 };
 
-/* tipo: "peregrinacao" | "excursao". Campo vazio é ocultado. */
 const PACOTES = [
   {
     id: "cimbres-juazeiro-2027", tipo: "peregrinacao",
@@ -22,7 +20,7 @@ const PACOTES = [
     roteiro: ["Serra de Cimbres", "Juazeiro do Norte", "Castelo Santa Helena", "Castelo Torre", "Casa do Doce", "Porto de Galinhas"],
     inclui: ["Ônibus executivo", "3 diárias em hotel com café da manhã"],
     obs: "Taxas de passeios não inclusas. Vagas limitadas.",
-    imagem: "assets/img/pacotes/cimbres-juazeiro.jpg"
+    imagem: "assets/img/pacotes/cimbres-juazeiro.jpg" 
   },
   {
     id: "misericordia-2027", tipo: "excursao",
@@ -34,7 +32,7 @@ const PACOTES = [
     roteiro: [],
     inclui: ["Ônibus executivo com Wi-Fi", "Translado", "Hospedagem com café da manhã", "Camisa personalizada", "Passagem pelo Instituto Hesed Fortaleza (somente ônibus 1)"],
     obs: "Vagas limitadas.",
-    imagem: "assets/img/pacotes/misericordia-fortaleza.jpg"
+    imagem: "assets/img/pacotes/misericordia-fortaleza.jpg" 
   },
   {
     id: "aparecida-2027", tipo: "peregrinacao",
@@ -46,7 +44,7 @@ const PACOTES = [
     roteiro: ["Salvador (BA)", "Porto Seguro (BA)", "Rio de Janeiro (RJ)", "Aparecida (SP)", "Curitiba (PR)", "Nova Trento (SC)", "Gramado (RS)", "Canela (RS)", "Brasília (DF)"],
     inclui: ["Transporte em ônibus executivo", "Hospedagem", "Café da manhã, almoço e jantar no hotel", "Seguro viagem", "Guia turístico acompanhante"],
     obs: "",
-    imagem: "assets/img/pacotes/aparecida.jpg"
+    imagem: "assets/img/pacotes/aparecida.jpg" 
   },
   {
     id: "frei-gilson-caxias", tipo: "excursao",
@@ -55,11 +53,10 @@ const PACOTES = [
     data: "A confirmar", duracao: "", preco: "", pagamento: "",
     descricao: "Caravana para o show do Frei Gilson. Consulte datas e valores pelo WhatsApp.",
     roteiro: [], inclui: [], obs: "",
-    imagem: "assets/img/pacotes/frei-gilson-caxias.jpg"
+    imagem: "assets/img/pacotes/frei-gilson-caxias.jpg" 
   }
 ];
 
-/* Fotos: adicione linhas. "forma": "alta" | "larga" | "" para variar o mosaico. */
 const FOTOS = [
   { src: "assets/img/galeria/foto-01.jpg", alt: "Grupo em peregrinação", legenda: "", forma: "larga" },
   { src: "assets/img/galeria/foto-02.jpg", alt: "Viagem em grupo", legenda: "", forma: "" },
@@ -69,12 +66,5 @@ const FOTOS = [
   { src: "assets/img/galeria/foto-06.jpg", alt: "Registro da viagem", legenda: "", forma: "larga" }
 ];
 
-/* Vídeos do YouTube: use só o ID (o que vem depois de v=). Lista vazia = seção oculta. */
-const VIDEOS = [
-  // { id: "XXXXXXXXXXX", titulo: "Peregrinação 2026", descricao: "" }
-];
-
-/* Depoimentos reais e autorizados. Lista vazia = seção oculta. */
-const DEPOIMENTOS = [
-  // { nome: "Nome autorizado", texto: "Texto do depoimento" }
-];
+const VIDEOS = [];
+const DEPOIMENTOS = [];
