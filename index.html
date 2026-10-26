@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generalíssima Viagens | Peregrinações, excursões e viagens em grupo</title>
+<meta name="description" content="Generalíssima Viagens: peregrinações, excursões e viagens em grupo. Conectando você ao sagrado a cada destino.">
+<link rel="canonical" href="https://generalissimaviagens.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Generalíssima Viagens">
+<meta property="og:description" content="Conectando você ao sagrado a cada destino.">
+<meta property="og:url" content="https://generalissimaviagens.com.br/">
+<meta property="og:image" content="https://generalissimaviagens.com.br/assets/img/og.jpg">
+<meta name="theme-color" content="#19295C">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="topo" id="topo">
+  <a class="marca" href="#inicio" aria-label="Generalíssima Viagens, início">
+    <img src="assets/img/logo.png" alt="" width="44" height="44" onerror="this.remove()">
+    <span>Generalíssima <b>Viagens</b></span>
+  </a>
+  <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><i></i><i></i><i></i></button>
+  <nav id="menu" aria-label="Principal">
+    <a href="#pacotes">Pacotes</a><a href="#quem-somos">Quem somos</a>
+    <a href="#galeria">Galeria</a><a href="#videos" data-opt="videos">Vídeos</a><a href="#contato">Contato</a>
+    <a class="btn btn-ouro" id="cta-topo" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </nav>
+</header>
+
+<main id="conteudo">
+<section class="hero" id="inicio">
+  <div class="hero-bg" data-parallax></div>
+  <svg class="orbita" viewBox="0 0 800 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+    <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#F3C063" stop-opacity="0"/><stop offset=".6" stop-color="#F3C063"/><stop offset="1" stop-color="#D9A441"/></linearGradient></defs>
+    <path d="M40 330 C 200 520, 640 520, 760 250 C 800 150, 700 60, 560 70" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round" pathLength="1"/>
+  </svg>
+  <div class="hero-txt">
+    <p class="selo">Turismo, excursões e peregrinações</p>
+    <h1>Conectando você ao sagrado a cada destino</h1>
+    <p>Viaje em grupo com ônibus executivo, hospedagem e roteiros pensados para a sua fé e para o seu descanso.</p>
+    <div class="acoes"><a class="btn btn-ouro" href="#pacotes">Conhecer os pacotes</a><a class="btn btn-claro" href="#contato">Entrar em contato</a></div>
+  </div>
+</section>
+
+<section class="sec claro" id="pacotes">
+  <div class="wrap">
+    <h2 class="rv">Pacotes de viagem</h2>
+    <div class="filtros" role="group" aria-label="Filtrar pacotes" id="filtros"></div>
+    <div class="grid" id="lista-pacotes"></div>
+  </div>
+</section>
+
+<section class="sec escuro" id="quem-somos">
+  <div class="wrap">
+    <h2 class="rv">Quem somos</h2>
+    <div class="duas">
+      <div class="rv">
+        <p class="lead">Conectar você ao sagrado a cada destino: essa é a essência da Generalíssima Viagens.</p>
+        <p>Fundada em 31 de maio de 2023, a nossa agência nasceu do desejo de realizar viagens com um propósito maior: proporcionar experiências marcantes de fé, devoção e encontro com Deus.</p>
+        <p>Acreditamos que uma peregrinação inesquecível exige excelência. Por isso, pautamos todo o nosso trabalho em três pilares fundamentais: qualidade, pontualidade e segurança. Cuidamos de cada detalhe do roteiro, do transporte à hospedagem, para que a sua única preocupação seja viver momentos de espiritualidade e comunhão.</p>
+        <p>Venha caminhar conosco e transformar sua viagem em uma jornada inesquecível!</p>
+      </div>
+      <ul class="pilares">
+        <li class="rv"><span aria-hidden="true">🕊️</span><h3>Fé &amp; Propósito</h3><p>Criamos roteiros pensados para proporcionar uma verdadeira experiência com Deus.</p></li>
+        <li class="rv"><span aria-hidden="true">🛡️</span><h3>Segurança &amp; Conforto</h3><p>Frota executiva, seguros completos e hospedagens de qualidade para a sua tranquilidade.</p></li>
+        <li class="rv"><span aria-hidden="true">⏱️</span><h3>Compromisso</h3><p>Pontualidade e organização impecável em todas as etapas da sua viagem.</p></li>
+      </ul>
+    </div>
+    <p class="visita rv">📍 Venha nos fazer uma visita: Rua Vereador Otávio Braga, 3043 – Planalto Ininga.</p>
+  </div>
+</section>
+
+<section class="sec" id="galeria">
+  <div class="wrap">
+    <h2 class="rv">Galeria de fotos</h2>
+    <div class="mosaico" id="mosaico"></div>
+  </div>
+</section>
+
+<section class="sec claro" id="videos" hidden>
+  <div class="wrap">
+    <h2 class="rv">Vídeos</h2>
+    <div class="grid" id="lista-videos"></div>
+  </div>
+</section>
+
+<section class="sec" id="depoimentos" hidden>
+  <div class="wrap"><h2 class="rv">Depoimentos</h2><div class="grid" id="lista-dep"></div></div>
+</section>
+
+<section class="sec escuro" id="contato">
+  <div class="wrap duas">
+    <div class="rv"><h2>Reserve a sua vaga</h2><p class="intro">As vagas são limitadas. Fale com a gente e escolha o seu roteiro.</p>
+      <a class="btn btn-ouro" id="cta-contato" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a></div>
+    <ul class="contatos rv" id="contatos"></ul>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <strong>Generalíssima Viagens</strong>
+    <nav aria-label="Rodapé"><a href="#pacotes">Pacotes</a><a href="#quem-somos">Quem somos</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a></nav>
+    <p id="rodape-contato"></p>
+    <small>© <span id="ano"></span> Generalíssima Viagens. Todos os direitos reservados.</small>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visualizador de fotos" hidden>
+  <button class="lb-x" aria-label="Fechar">×</button>
+  <button class="lb-n lb-prev" aria-label="Foto anterior">‹</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="lb-n lb-next" aria-label="Próxima foto">›</button>
+</div>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

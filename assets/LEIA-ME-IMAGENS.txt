@@ -1,0 +1,13 @@
+NOMES DOS ARQUIVOS (use JPG ou WebP, até ~300 KB cada; largura máx. 1600 px)
+
+assets/img/logo.png ........... logotipo (fundo transparente, quadrado, ~200x200)
+assets/img/favicon.png ........ ícone 64x64
+assets/img/og.jpg ............. imagem de compartilhamento 1200x630
+assets/img/hero.jpg ........... foto grande do topo (horizontal, 1920x1080)
+assets/img/pacotes/cimbres-juazeiro.jpg
+assets/img/pacotes/misericordia-fortaleza.jpg
+assets/img/pacotes/aparecida.jpg
+assets/img/pacotes/frei-gilson-caxias.jpg
+assets/img/galeria/foto-01.jpg ... foto-06.jpg (para mais fotos, copie uma linha em js/data.js, FOTOS)
+Vídeos: suba no YouTube e coloque o ID em js/data.js (VIDEOS).
+Se um arquivo não existir, o site mostra um fundo azul no lugar, sem quebrar.
