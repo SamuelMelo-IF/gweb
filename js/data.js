@@ -2,10 +2,10 @@
    ARQUIVO DE CONTEÚDO
    ========================================================== */
 const CONTACT = {
-  whatsapp: "86995932781",
-  telefone: "(86) 99593-2781",
+  CNPJ: "68.456.759/0001-17",
+  whatsapp: "(86) 99593-2781",
   instagram: "generalissima_viagens",
-  email: "", 
+  email: "generalissimaviagens@gmail.com", 
   endereco: "Rua Vereador Otávio Braga, 3043 – Planalto Ininga"
 };
 
